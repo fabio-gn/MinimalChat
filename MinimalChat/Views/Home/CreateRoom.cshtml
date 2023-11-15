@@ -1,0 +1,36 @@
+﻿@model MinimalChat.Models.Domain.Rooms
+@{
+    ViewData["Title"] = "CreateRoom";
+}
+
+<h1>CreateRoom</h1>
+
+<form method="post" action="CreateRoom" >
+    <div class="mb-3">
+        <label for="room-name" class="form-label">Room Name:</label>
+        <input type="text" class="form-control" id="room-name" placeholder="" asp-for="RoomName">
+    </div>
+    <div class="mb-3">
+        <label for="room-description" class="form-label">Room Description:</label>
+        <textarea class="form-control" id="room-description" rows="3" asp-for="RoomDescription"></textarea>
+    </div>
+    <div class="mb-3">
+        <label for="participants-number" class="form-label">How many participants?</label>
+        <input type="number" class="form-control" id="participants-number" placeholder=""asp-for="RoomMembersQuantity">
+    </div>
+    <button type="submit">Submit</button>
+</form>
+ 
+
+@*[Key]
+        public int Id { get; set; }
+        public string RoomName { get; set;}
+        public string RoomDescription { get; set;} = string.Empty;
+        public int RoomMembersQuantity { get; set;}
+
+
+
+
+        public ICollection<Users>
+    users { get; set; }
+    public DateTime DateOfCreation { get; set; }*@
